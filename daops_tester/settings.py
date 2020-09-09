@@ -1,11 +1,30 @@
 projects = {
-    'cmip5': {
-        'start_dir': '/badc/cmip5/data/cmip5',
-        'base': '/badc/cmip5/data',
+    'cmip6': {
+        'start_dir': '/badc/cmip6/data/cmip6',
+        'base': '/badc/cmip6/data',
         'prefacets': 3,
-        'facets': 'badc cmip6 data project mip institution model experiment ensemble table variable grid version'.split(),
+        'facets': 'badc cmip6 data mip_era activity_id institution_id source_id experiment_id member_id table_id variable_id grid_label version'.split(),
+        'facet_picks': {'ensemble': 'r1i1p1'},
+        'wildcards': ['institution', 'model']
+    },
+    'c3s-cmip5': {
+        'start_dir': '/group_workspaces/jasmin2/cp4cds1/vol1/data/c3s-cmip5',
+        'base': '/group_workspaces/jasmin2/cp4cds1/vol1/data',
+        'var_index': -2,
+        'freq_index': 5,
+        'prefacets': 6,
+        'facets': '_ _ _ _ _ activity product institute model experiment frequency realm mip_table ensemble_member variable version'.split(),
         'facet_picks': {'ensemble': 'r1i1p1'},
         'wildcards': ['institution', 'model']
     }
+}
+
+facet_rules = {
+    "cmip5": "activity product institute model experiment frequency realm mip_table ensemble_member version variable".split(),
+    "cmip6": "mip_era activity_id institution_id source_id experiment_id member_id table_id variable_id grid_label version".split(),
+    "cordex": "project product domain institute driving_model experiment ensemble rcm_name rcm_version time_frequency variable".split(),
+    "c3s-cmip5": "activity product institute model experiment frequency realm mip_table ensemble_member variable version".split(),
+    "c3s-cmip6": "mip_era activity_id institution_id source_id experiment_id member_id table_id variable_id grid_label version".split(),
+    "c3s-cordex": "project product domain institute driving_model experiment ensemble rcm_name rcm_version time_frequency variable version".split(),
 }
 
