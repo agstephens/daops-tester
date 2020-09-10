@@ -18,13 +18,3 @@ projects = {
         'wildcards': ['institution', 'model']
     }
 }
-
-facet_rules = {
-    "cmip5": "activity product institute model experiment frequency realm mip_table ensemble_member version variable".split(),
-    "cmip6": "mip_era activity_id institution_id source_id experiment_id member_id table_id variable_id grid_label version".split(),
-    "cordex": "project product domain institute driving_model experiment ensemble rcm_name rcm_version time_frequency variable".split(),
-    "c3s-cmip5": "activity product institute model experiment frequency realm mip_table ensemble_member variable version".split(),
-    "c3s-cmip6": "mip_era activity_id institution_id source_id experiment_id member_id table_id variable_id grid_label version".split(),
-    "c3s-cordex": "project product domain institute driving_model experiment ensemble rcm_name rcm_version time_frequency variable version".split(),
-}
-
